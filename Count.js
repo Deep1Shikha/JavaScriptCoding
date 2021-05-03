@@ -46,25 +46,45 @@ function apple(x){
 var curriedQuadratic = function(a) {
     return function(b) {
         return function(c) {
-            return function(x) {
-                return a * d * c + b * a + d;
-            };
-        };
-    };
-};
-
-// Curried function example
-var curriedQuadratic = function(a) {
-    return function(b) {
-        return function(c) {
             return function(d) {
                 return a * d * c + b * a + d;
             };
         };
     };
 };
+console.log(curriedQuadratic(7)(3)(4)(5))
 
-console.log(curriedQuadratic(2)(3)(4)(5))
+/* Have the function AdditivePersistence(num) take the num parameter being passed which will always be a positive integer and return its additive persistence which is the number of times you must add the digits in num until you reach a single digit.
+
+For example: if num is 2718 then your program should return 2 because 2 + 7 + 1 + 8 = 18 and 1 + 8 = 9 and you stop at 9.
+ */
+
+function AdditivePersistence(){
+    let num = 99999999999;
+     console.log(num)
+    let val = num;
+    let sum = 0
+    let remainder = 0
+    let count =0;
+   while(val){
+        remainder = val%10;
+        val = Math.floor(val/10)
+        sum = sum+remainder;
+        console.log(val+" "+sum)
+        if(sum>9 && val == 0)
+        {
+         count++;
+         val = sum;
+         sum = 0;
+        }
+    }
+  
+  return count+1;
+}
+
+let found = AdditivePersistence();
+console.log(found)
+
 
  
 
