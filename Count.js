@@ -78,6 +78,8 @@ function AdditivePersistence(){
          sum = 0;
         }
     }
+
+    
   
   return count+1;
 }
@@ -86,11 +88,24 @@ let found = AdditivePersistence();
 console.log(found)
 
 
- 
+// Initialize an object
+var arr1 = [{firstName: "Aakash",lastName:"Lotia", age:30},{firstName: "Aakash",lastName:"Sharma", age:30},{firstName: "Mahesh",lastName:"Rathi", age:31}];
+
+var arr2 = [{firstName: "Shilpa",lastName:"Yadav", age:29},{firstName: "Sunil",lastName:"Deshmukh", age:33},{firstName: "Mansi",lastName:"Kothari", age:35}]; 
+// // Merge the objects
+// const character = [...arr1, ...arr2];
+
+// console.log(character.values());
+
+Array.prototype.push.apply(arr1,arr2);
+
+console.log(arr1)
 
 
 
+const employees = ['Ron', 'April', 'Andy', 'Leslie'];
 
+console.log(Object.getPrototypeOf(employees));
 
 
 
