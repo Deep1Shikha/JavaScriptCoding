@@ -1,0 +1,17 @@
+.toggle > div {
+   
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    cursor : pointer;
+  }
+  .teamSelected {
+    background-color: red;
+    border-radius: 4px;
+  }
+  
+  .container{
+    display:grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 2px;
+  }
